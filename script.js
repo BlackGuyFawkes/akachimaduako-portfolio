@@ -22,3 +22,5 @@ if (window.location.protocol === 'file:') {
     }
   });
 }
+
+// NeonStudio uses the same clean-folder routing convention as SOC and pentesting.

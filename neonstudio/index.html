@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NeonStudio | Akachi Maduako</title>
+  <meta name="description" content="NeonStudio by Akachi Maduako — Android mobile games and apps, including the NEON game catalogue.">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .neon-hero{padding:88px 0 58px;background:
+      radial-gradient(circle at 15% 10%,rgba(65,231,255,.16),transparent 30rem),
+      radial-gradient(circle at 88% 20%,rgba(193,80,255,.13),transparent 26rem)}
+    .neon-title span{color:#55d9ff;text-shadow:0 0 24px rgba(85,217,255,.25)}
+    .studio-mark{display:inline-flex;gap:10px;align-items:center;padding:8px 12px;border:1px solid #284b63;border-radius:999px;color:#79eeff;background:rgba(35,97,128,.12);font-weight:800}
+    .game-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .game-card{border:1px solid #24445c;border-radius:18px;padding:20px;background:linear-gradient(180deg,#10263a,#0b1c2c)}
+    .game-card strong{display:block;font-size:1.05rem;color:#f3f7ff}
+    .game-card span{display:block;color:#8eb2ce;margin-top:5px;font-size:.9rem}
+    .privacy-callout{border:1px solid #49346d;background:linear-gradient(135deg,rgba(102,65,164,.18),rgba(24,93,119,.15));border-radius:22px;padding:28px}
+    @media(max-width:900px){.game-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.game-grid{grid-template-columns:1fr}.neon-hero{padding-top:64px}}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../">Akachi<span>Maduako</span></a>
+    <div class="links">
+      <a href="../#about">About</a>
+      <a href="../SOC/">SOC</a>
+      <a href="../pentesting/">Pentesting</a>
+      <a href="../projects/">Projects</a>
+      <a href="./">NeonStudio</a>
+      <a href="../assets/docs/Akachi-Maduako-Resume.pdf">Resume</a>
+      <a href="../#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="neon-hero">
+  <div class="wrap">
+    <div class="studio-mark">MOBILE GAMES & APPS</div>
+    <h1 class="neon-title">neon<span>studio</span></h1>
+    <p class="lede">My mobile development label for Android games and apps. NeonStudio is the home for the NEON game catalogue and future mobile releases.</p>
+    <div class="cta">
+      <a class="btn primary" href="#games">View games</a>
+      <a class="btn" href="privacy/">Privacy Policy</a>
+    </div>
+  </div>
+</header>
+
+<section id="games">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">NEON catalogue</div><h2>Android games</h2></div>
+      <p>A growing collection of compact mobile games published under neonstudio.</p>
+    </div>
+    <div class="game-grid">
+      <div class="game-card"><strong>NEON 2048</strong><span>Puzzle</span></div>
+      <div class="game-card"><strong>NEON Snake</strong><span>Arcade</span></div>
+      <div class="game-card"><strong>NEON Pong</strong><span>Arcade</span></div>
+      <div class="game-card"><strong>NEON Tic-Tac-Toe</strong><span>Classic strategy</span></div>
+      <div class="game-card"><strong>NEON Breakout</strong><span>Arcade</span></div>
+      <div class="game-card"><strong>NEON Simon</strong><span>Memory</span></div>
+      <div class="game-card"><strong>NEON Reaction</strong><span>Reflex</span></div>
+      <div class="game-card"><strong>NEON Whack-a-Mole</strong><span>Reflex</span></div>
+      <div class="game-card"><strong>NEON Stroop</strong><span>Color / reaction</span></div>
+      <div class="game-card"><strong>NEON Doodle</strong><span>Arcade</span></div>
+      <div class="game-card"><strong>NEON Stack</strong><span>Timing</span></div>
+      <div class="game-card"><strong>NEON Connect 4</strong><span>Strategy</span></div>
+      <div class="game-card"><strong>NEON RPS</strong><span>Casual</span></div>
+      <div class="game-card"><strong>NEON Hangman</strong><span>Word game</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="privacy-callout">
+      <div class="eyebrow">Privacy</div>
+      <h2>One privacy policy for the NeonStudio game catalogue.</h2>
+      <p class="lede">The current games are designed to work fully offline and do not collect, transmit, or share personal data. Local gameplay preferences and scores stay on the device.</p>
+      <div class="cta">
+        <a class="btn primary" href="privacy/">Read Privacy Policy</a>
+        <a class="btn" href="mailto:maduakoakachi@gmail.com">Contact developer</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="wrap">© 2026 neonstudio (Akachi Maduako) • akachimaduako.com</div></footer>
+<script src="../script.js"></script>
+</body>
+</html>

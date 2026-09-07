@@ -42,3 +42,17 @@ only when opened with file:// on Windows. Online, the URLs stay clean:
 
   https://akachimaduako.com/SOC/
   https://akachimaduako.com/pentesting/
+
+
+NEONSTUDIO ROUTES
+-----------------
+https://akachimaduako.com/neonstudio/
+https://akachimaduako.com/neonstudio/privacy/
+
+For Google Play listings, use:
+https://akachimaduako.com/neonstudio/privacy/
+
+UPDATE SCRIPT
+-------------
+Run .\update-portfolio.ps1 from the root of the local Git repository whenever
+you want to commit and upload website changes.
