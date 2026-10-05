@@ -1,0 +1,5 @@
+.git
+.assetsignore
+wrangler.jsonc
+update-portfolio.ps1
+README-DEPLOY.txt
