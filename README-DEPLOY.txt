@@ -11,12 +11,26 @@ Recommended deployment:
 Important structure:
 /                 Main personal portfolio
 /soc/             SOC/security investigation portfolio
-/projects/        CivicForge, security tooling and software projects
-/assets/images/   Personal photography
+/pentesting/      Penetration testing portfolio
+/resume/          Request resume form (no public PDF)
+/assets/images/   Portrait, favicon, social share card
 /assets/soc/      SOC screenshots
-/assets/docs/     Resume and investigation reports
+/assets/docs/     Investigation and pentest reports
 
-The resume remains a normal PDF; personal photographs and SOC screenshots are website-only assets.
+NOVEMBER 2026: CYBERSECURITY-ONLY REBUILD
+- Nav is About, SOC, Pentesting, Resume, Contact.
+- /projects/ redirects to the homepage.
+- /neonstudio/ and /neonstudio/privacy/ stay online (Google Play needs the privacy URL)
+  but are unlinked and marked noindex.
+- Old resume PDF URLs redirect to /resume/ (via _redirects on Cloudflare).
+- SEO: robots.txt, sitemap.xml, canonical + Open Graph tags, Person JSON-LD,
+  share image at assets/images/og-card.jpg.
+
+RESUME FORM: ONE-TIME ACTIVATION
+The form posts through FormSubmit (formsubmit.co) to the Gmail address in the form's
+action attribute. The first submission sends an activation email to that inbox.
+Click the link once; after that every request is delivered. Optionally, replace the
+address in resume/index.html with the random alias FormSubmit gives you after activation.
 
 
 PENTESTING PAGE

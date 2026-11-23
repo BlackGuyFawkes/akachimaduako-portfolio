@@ -1,0 +1,101 @@
+<!doctype html><html lang="en-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Request Resume | Akachi Maduako, SOC Analyst &amp; Penetration Tester</title>
+<meta name="description" content="Request Akachi Maduako's resume. Share the role and job description and receive a resume for SOC analyst, threat detection, fraud monitoring or penetration testing positions.">
+<link rel="canonical" href="https://akachimaduako.com/resume/">
+<meta name="theme-color" content="#080b10">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Request Resume | Akachi Maduako">
+<meta property="og:description" content="Share the role and receive Akachi Maduako's resume.">
+<meta property="og:url" content="https://akachimaduako.com/resume/">
+<meta property="og:image" content="https://akachimaduako.com/assets/images/og-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon.png">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../dimensional.css">
+</head><body>
+<nav class="nav"><div class="wrap nav-inner"><a class="brand" href="../">Akachi<span>Maduako</span></a><div class="links"><a href="../#about">About</a><a href="../soc/">SOC</a><a href="../pentesting/">Pentesting</a><a href="../resume/" aria-current="page">Resume</a><a href="../#contact">Contact</a></div></div></nav>
+<main>
+<header class="case-hero"><div class="wrap"><div class="eyebrow">Resume</div><h1>Request resume</h1><p class="lede">Share a few details about the role and I will email you my resume.</p></div></header>
+<section class="form-section"><div class="wrap form-layout">
+<form class="resume-form" id="resume-form" action="https://formsubmit.co/maduakoakachi@gmail.com" method="POST" novalidate>
+  <input type="hidden" name="_subject" value="Resume request from akachimaduako.com">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://akachimaduako.com/resume/?sent=1">
+  <div class="hp" aria-hidden="true"><label for="hp">Leave this field empty</label><input type="text" id="hp" name="_honey" tabindex="-1" autocomplete="off"></div>
+
+  <div class="field"><label for="name">Name <span class="opt">(optional)</span></label>
+  <input id="name" name="name" type="text" autocomplete="name" maxlength="120"></div>
+
+  <div class="field"><label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+  <input id="email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="email-err">
+  <p class="err" id="email-err" hidden>Please enter a valid email address.</p></div>
+
+  <div class="field"><label for="job">Job description <span class="req" aria-hidden="true">*</span></label>
+  <textarea id="job" name="job_description" rows="8" required maxlength="8000" placeholder="Paste the job description or a link to the posting" aria-describedby="job-err"></textarea>
+  <p class="err" id="job-err" hidden>Please add the job description or a link to the posting.</p></div>
+
+  <button class="btn primary" type="submit" id="submit-btn">Request resume</button>
+  <p class="small form-note"><span class="req">*</span> Required. Your details are used only to reply to this request.</p>
+  <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+</form>
+<aside class="form-aside">
+  <h2>What I am looking for</h2>
+  <ul class="finding-list">
+    <li><strong>Roles:</strong> SOC analyst (Tier 1 to 3), threat detection, fraud and AML monitoring, penetration testing</li>
+    <li><strong>Location:</strong> Toronto / GTA, hybrid, onsite or remote in Canada</li>
+    <li><strong>Schedule:</strong> open to shift work</li>
+  </ul>
+  <p class="small">Prefer email? Write to <a class="inline" href="mailto:maduakoakachi@gmail.com">maduakoakachi@gmail.com</a>.</p>
+</aside>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap">© 2026 Akachi Maduako • SOC Analyst &amp; Penetration Tester • Toronto, Canada</div></footer>
+<script>
+(() => {
+  const form = document.getElementById('resume-form');
+  const status = document.getElementById('form-status');
+  const btn = document.getElementById('submit-btn');
+  const email = form.email, job = form.job_description;
+  const ok = (msg) => { status.className = 'form-status success'; status.textContent = msg; };
+  const fail = (msg) => { status.className = 'form-status error'; status.textContent = msg; };
+
+  if (new URLSearchParams(location.search).get('sent') === '1') ok('Thanks. Your request was sent and I will be in touch by email.');
+
+  function check(field, errId, valid) {
+    const err = document.getElementById(errId);
+    err.hidden = valid; field.setAttribute('aria-invalid', String(!valid));
+    return valid;
+  }
+  email.addEventListener('blur', () => email.value && check(email, 'email-err', email.checkValidity()));
+  job.addEventListener('input', () => job.value.trim() && check(job, 'job-err', true));
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const v1 = check(email, 'email-err', email.value.trim() !== '' && email.checkValidity());
+    const v2 = check(job, 'job-err', job.value.trim() !== '');
+    if (!v1) { email.focus(); return; }
+    if (!v2) { job.focus(); return; }
+    if (form._honey.value) return;
+
+    btn.disabled = true; btn.textContent = 'Sending...'; status.textContent = '';
+    const data = Object.fromEntries(new FormData(form));
+    data._replyto = data.email;
+    try {
+      const res = await fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const out = await res.json().catch(() => ({}));
+      if (res.ok && String(out.success) !== 'false') {
+        form.reset();
+        ok('Thanks. Your request was sent and I will be in touch by email.');
+      } else { throw new Error(out.message || 'Request failed'); }
+    } catch (err) {
+      fail('Sorry, the request could not be sent. Please email maduakoakachi@gmail.com directly.');
+    } finally { btn.disabled = false; btn.textContent = 'Request resume'; }
+  });
+})();
+</script>
+<script src="../script.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script><script src="../dimensional.js" defer></script></body></html>

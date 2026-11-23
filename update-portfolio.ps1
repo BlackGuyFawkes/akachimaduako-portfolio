@@ -42,8 +42,7 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "Upload complete." -ForegroundColor Green
     Write-Host "GitHub Pages will deploy the update automatically."
     Write-Host "Website: https://akachimaduako.com/"
-    Write-Host "NeonStudio: https://akachimaduako.com/neonstudio/"
-    Write-Host "Privacy: https://akachimaduako.com/neonstudio/privacy/"
+    Write-Host "Resume form: https://akachimaduako.com/resume/"
 } else {
     Write-Host "Git push failed. Review the Git output above." -ForegroundColor Red
     exit 1

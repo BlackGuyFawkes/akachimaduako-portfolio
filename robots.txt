@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /neonstudio/
+Disallow: /projects/
+
+Sitemap: https://akachimaduako.com/sitemap.xml

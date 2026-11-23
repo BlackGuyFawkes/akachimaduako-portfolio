@@ -35,7 +35,7 @@ if (portrait) {
   const frame = document.createElement('div'); frame.className = 'portrait-frame';
   portrait.replaceWith(stage); stage.append(frame); frame.append(portrait);
   const caption = document.createElement('div'); caption.className = 'portrait-caption';
-  caption.innerHTML = 'AKACHI MADUAKO<span>Cybersecurity / Software</span>';
+  caption.innerHTML = 'AKACHI MADUAKO<span>SOC / Penetration Testing</span>';
   frame.append(caption);
 }
 
